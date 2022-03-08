@@ -1,0 +1,45 @@
+/******************************************************************************
+
+Rotate a matrix by 90 degree in clockwise direction without using any extra space
+*******************************************************************************/
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		int[][] matrix={{1,2,3},{4,5,6},{7,8,9}};
+		int n=3;
+		int k=3;
+		int[][] result=new int[n][k];
+		for(int i=0;i<n;i++)
+		{
+		    for(int j=0;j<k;j++)
+		    {
+		     
+		        result[i][j]=matrix[j][i];
+		       
+		    }
+		}
+		int z=0;
+		for(int i=0;i<n;i++)
+		{
+		    z=0;
+		    for(int j=k-1;j>=0;j--)
+		    {
+		        matrix[i][z]=result[i][j];
+		        z++;
+		    }
+		}
+		
+		
+		for(int i=0;i<n;i++)
+		{
+		    for(int j=0;j<n;j++)
+		    {
+		        System.out.print(matrix[i][j]);
+		    }
+		    System.out.println();
+		}
+		
+		
+	}
+}
